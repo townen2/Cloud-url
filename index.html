@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DYBY TECH URL CLOUD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-cloud-upload-alt"></i> DYBY TECH URL CLOUD</h1>
+        <div class="upload-box">
+            <div class="file-input-wrapper">
+                <label for="fileInput" class="file-input-label">
+                    <i class="fas fa-file-upload"></i> Choose a File
+                </label>
+                <input type="file" id="fileInput" accept="image/jpeg,image/png">
+                <div id="fileName" class="file-name">No file selected</div>
+            </div>
+            <button onclick="uploadFile()">
+                <i class="fas fa-upload"></i> Upload and Generate URL
+            </button>
+            <div id="loading" class="loading-text">
+                <i class="fas fa-spinner fa-spin"></i> Processing your file...
+            </div>
+        </div>
+        <div id="result"></div>
+        <button id="copyButton" onclick="copyURL()">
+            <i class="far fa-copy"></i> Copy URL
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

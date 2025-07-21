@@ -27,7 +27,7 @@ function uploadFile() {
 
     loadingText.style.display = 'block';
 
-    fetch('https://your-api-url.com/upload', { // Replace with your backend URL
+    fetch('https://dyby-cloud-url.vercel.app/upload', { // Replace with your backend URL
         method: 'POST',
         body: formData,
     })
@@ -35,7 +35,7 @@ function uploadFile() {
     .then(data => {
         loadingText.style.display = 'none';
         if (data.success) {
-            const fullURL = 'https://your-api-url.com' + data.url;
+            const fullURL = 'https://dyby-cloud-url.vercel.app' + data.url;
             result.innerHTML = '<strong>File URL:</strong><br><a href="' + fullURL + '" target="_blank">' + fullURL + '</a>';
             copyButton.style.display = 'inline-block';
             copyButton.setAttribute('data-url', fullURL);
